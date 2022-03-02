@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Profile </title>
+</head>
+<body>
+<center>				
+<a th:href="@{/employee/myprofile/{id}(id=${employee.id})}">Profile</a>
+<a th:href="@{/employee/{id}/leave(id=${employee.id})}">Apply Leave</a>
+<a th:href="@{/employee/{id}/myleaves(id=${employee.id})}">View Leave</a>
+<a th:href="@{/}">Logout</a>
+  <table bgcolor="green" border="5" align="center">
+    <tr>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Salary</th>
+      <th>Department</th>      
+      <th>Email</th>
+      <th>Address</th>
+      <th>Mobile</th>
+<!--  <th>Update</th> -->
+    </tr>
+    <tr>
+      <td th:text="${employee.firstName}"></td>
+      <td th:text="${employee.lastName}"></td>
+      <td th:text="${employee.salary}"></td>
+      <td th:text="${employee.department}"></td>
+      <td th:text="${employee.email}"></td>
+      <td th:text="${employee.address}"></td>
+      <td th:text="${employee.mobileNumber}"></td>
+      <!-- <td><a href="">Update</a></td> --> 
+    </tr>
+  </table>
+</center>
+</body>
+</html>

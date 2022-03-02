@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home Page</title>
+<link href="/css/home.css" rel="stylesheet">
+<script type="text/javascript" src="/js/home.js"></script>
+</head>
+<body>
+	<header id="header" th:fragment="header">
+		<div class="header-content">
+			<div class="header logo">
+				<h1>Employee Manager Application</h1>
+			</div>
+			<div class="header hlink">
+				<a href="/">Home</a>
+				<div class="dropdown">
+					<a href="#">Registration</a>
+					<div class="dropdown-content">
+						<a href="/employeeRegister">Employee Registration</a>
+						<hr>
+						<a href="/managerRegister">Manager Registration</a>
+					</div>
+				</div>
+				<div class="dropdown">
+					<a href="#">Login</a>
+					<div class="dropdown-content">
+						<a href="/employeeLogin">Employee Login</a>
+						<hr>
+						<a href="/managerLogin">Manager Login</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<section class="imgsec">
+			<img src="https://www.trstimson.com/wp-content/uploads/2021/10/av-operations-manager.jpg">
+		</section>
+	</main>
+
+</body>
+</html>

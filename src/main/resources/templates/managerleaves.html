@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Manager Leave</title>
+</head>
+<body bgcolor="purple">
+	<center>
+		<h3 align="center">
+			<a th:href="@{/manager/myprofile/{id}(id=${manager.id})}">Profile</a> || 
+			<!-- <a th:href="@{/manager/checkleaves/{id}(id=${manager.id})}">View Leave -->
+			</a> <a th:href="@{/}">Logout</a>
+		</h3>
+		<table bgcolor="blue" border="5" align="center" width="75%">
+			<thead>
+				<tr>
+					<td>Name</td>
+					<td>Date</td>
+					<td>Department</td>
+					<td>Status</td>
+					<td>Action</td>
+				</tr>
+			</thead>
+			<tbody>
+			<tr th:each="leave: ${list}">
+      <td th:text="${leave.firstName}"></td>
+      <td th:text="${leave.date}"></td>
+      <td th:text="${leave.department}"></td>
+      <td th:text="${leave.status}"></td>
+      <td><a th:href="@{/accept/{id}(id=${leave.lid})}">Accept</a>||
+          <a th:href="@{/reject/{id}(id=${leave.lid})}">Reject</a></td> 
+      </tr>
+	</tbody>
+		</table>
+	</center>
+</body>
+</html>

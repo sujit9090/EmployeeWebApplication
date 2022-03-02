@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+.formsection{
+	margin-top: 15px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.7);
+	border-radius: 10px;
+	padding: 30px;
+}
+label{
+	display: block;
+	margin-bottom: 5px;
+}
+.formdiv{
+	margin-bottom: 10px;
+}
+.tb{
+	width: 100%;
+}
+.submitbtn{
+	text-align: center;
+}
+.submitbtn input{
+	border: none;
+	outline:none;
+	width: 150px;
+	padding: 5px 0;
+	background: green;
+	color: #fff;
+	font-size: 1.02rem;
+	text-transform: uppercase;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: 0.25s;
+}
+.formlink {
+	margin-top: 10px;
+	text-align: right;
+}
+.formlink a{
+	text-decoration: none;
+}
+.formlink a:hover{
+	text-decoration: underline;
+}

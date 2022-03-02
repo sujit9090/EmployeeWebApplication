@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>manager Profile</title>
+</head>
+<body>
+	<center>
+		<a th:href="@{/manager/myprofile/{id}(id=${manager.id})}">Profile</a>
+		<a th:href="@{/manager/checkleaves/{id}(id=${manager.id})}">Check Leaves
+		</a> <a th:href="@{/}">Logout</a>
+		<table bgcolor="mustard" border="5" align="center" width="70%">
+			<tr>
+				<th>Full Name</th>
+				<th>Email</th>
+				<th>Department</th>
+				<th>Mobile</th>
+				<th>Address</th>
+
+				<!--  <th>Update</th> -->
+			</tr>
+			<tr>
+				<td th:text="${manager.fullName}"></td>
+				<td th:text="${manager.email}"></td>
+				<td th:text="${manager.department}"></td>
+				<td th:text="${manager.mobileNumber}"></td>
+				<td th:text="${manager.address}"></td>
+				<!-- <td><a href="">Update</a></td> -->
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

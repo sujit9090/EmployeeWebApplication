@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Employee Register</title>
+<link href="/css/home.css" rel="stylesheet">
+<link href="/css/pr.css" rel="stylesheet">
+<link href="/css/form.css" rel="stylesheet">
+</head>
+<body>
+	<header th:replace="/home.html :: header"></header>
+	<main>
+		<section class="formsection">
+			<h2>Employee Registration</h2>
+			<hr>
+			<form th:action="@{/employee/save}" method="post"
+				th:object="${employee}">
+				<div class="formdiv">
+					<label>First Name :</label> <input type="text" id="firstName"
+						placeholder="Enter FirstName" th:field="*{firstName}" class="tb">
+				</div>
+				<div class="formdiv">
+					<label>Last Name :</label> <input type="text" id="lastName"
+						placeholder="Enter LastName" th:field="*{lastName}" class="tb">
+				</div>
+				<div class="formdiv">
+					<label>Salary :</label> <input type="text" id="salary"
+						placeholder="Enter Salary" th:field="*{salary}" class="tb">
+				</div>
+				<!-- 			
+			Department :  <input type="text"
+					class="form-control" id="lastName"
+					placeholder="Enter Department" th:field="*{department}"><br><br>
+					 -->
+
+				<div class="formdiv">
+					<label for="department">Department :</label> <select
+						id="department" th:field="*{department}" class="tb">
+						<option th:value="Development" th:text="Development"></option>
+						<option th:value="Testing" th:text="Testing"></option>
+						<option th:value="HumanResource" th:text="HumanResource"></option>
+					</select>
+				</div>
+				<div class="formdiv">
+					<label>Email :</label> <input type="email" id="email"
+						placeholder="Enter email" th:field="*{email}" class="tb">
+				</div>
+				<div class="formdiv">
+					<label>Password :</label> <input type="password" id="password"
+						placeholder="Password" th:field="*{password}" class="tb">
+				</div>
+				<div class="formdiv">
+					<label>Mobile Number : </label>
+					 <input type="text" id="mobileNumber"
+						placeholder="mobile" th:field="*{mobileNumber}" class="tb">
+				</div>
+				<div class="formdiv">
+				<label>Address : </label>
+				<input type="text" id="address" placeholder="Enter Address"
+					th:field="*{address}" class="tb">
+					</div>
+				<div class="submitbtn">
+					<input type="submit">
+				</div>
+			</form>
+		</section>
+	</main>
+
+</body>
+</html>

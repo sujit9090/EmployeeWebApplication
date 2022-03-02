@@ -1,0 +1,16 @@
+@charset "ISO-8859-1";
+#header{
+	position: relative;
+	box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
+main{
+	width:35%;
+	margin: 20px auto;
+}
+.formsection h2{
+	text-align: center;
+	color: navy;
+}
+.formsection form{
+	margin-top: 10px;
+}

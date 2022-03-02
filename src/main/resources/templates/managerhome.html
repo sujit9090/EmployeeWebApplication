@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager Home</title>
+</head>
+<body>
+<center>
+ <h1 align="center"> Manager Home </h1>
+ <h3 align="center">
+<a th:href="@{/manager/myprofile/{id}(id=${manager.id})}">Profile</a>
+<a th:href="@{/manager/checkleaves/{id}(id=${manager.id})}">View Leave</a>
+<a th:href="@{/}">Logout</a></h3>
+</center>
+</body>
+</html>
